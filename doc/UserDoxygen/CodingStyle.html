@@ -1,0 +1,360 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+   <meta http-equiv="Content-Type"
+   content="text/html;charset=iso-8859-1"><title>bbtk Developpers</title></head>
+
+<body>
+
+<!--#######################################################################-->
+<h1>bbtk coding style (and other religious/agnostic beliefs)</h1>
+<hr size="1"><address style=""></address>
+
+<pre>* Introduction:
+   The following coding style intends to ease the work of developpers
+   themselves but also of users who will study, maintain, fix, and extend
+   the code. Any bread crumbs that you can drop in the way of explanatory
+   names and comments will go a long way towards helping other readers and
+   developers.
+   Keep in mind that to a large extent the structure of code directly
+   expresses its implementation.
+                                                                                
+* Language:
+ - C++ (for the kernel) and Python (for the wrappers).
+ - all the names (variables, members, methods, functions) and comments
+   should be based on English. Documentation, guides, web site and other
+   informations should be in English.
+   Make sure you use correct (basic) English and complete, grammatically
+   correct sentences for comments and documentation.
+                                                                                
+* General layout:
+ - Each line of code should take no more than 79 characters. Break the code
+   across multiple lines as necessary.
+ - Methods and functions should keep a reasonable number of lines when
+   possible (a typical editor displays 50 lines). Avoid code duplication.
+   Always prefer creating a new method or function to duplication.
+   A high indentation level generally suggests the need for a new
+   method or function.
+ - All the code should be properly indented. The appropriate indentation
+   level is TWO spaces for each level of indentation. DO NOT USE TABS.
+   Set up your editor to insert spaces. Using tabs may look good in your
+   editor but will wreak havoc in others, or in external tools (e.g. side
+   by side diffs).
+ - The declaration of variables within classes, methods, and functions
+   should be one declaration per line. Provide them with default values
+   and don't rely on compilers for default initialization.
+                                                                                
+* Naming conventions:
+ - Generalities:
+   In general, names are constructed by using case change to indicate
+   separate words, as in ImageDataSize (standing for "image data size").
+   Underscores are not used. Variable names are choosen carefully with the
+   intention to convey the meaning behind the code. Names are generally
+   spelled out; use of abbreviations is discouraged.
+   [Note: abbreviation are allowable when in common use, and should be in
+    uppercase as in LUT or RGBA.]
+   While this does result in long names, it self-documents the code.
+ - Naming Files:
+   Files should have the same name as the class, with a "bbtk" prepended.
+   Header files are named .h, while implementation files are named either
+   .cxx or .txx, depending on whether they are implementations of templated
+   classes. For example, the class bbtk::BlackBox is declared and defined
+   in the files bbtkBlackBox.h and bbtkBlackBox.cxx.
+ - Naming Class Data Members, Methods, and Functions:
+   Class data members (aka Attributes) are named beginning with a lower case 'm'
+   (m as 'member'!) followed by capital letter as in mGroupPixel, in order not
+   be confused with methods names.
+   Global functions and class methods, either static or class members, are
+   named beginning with a capital letter, as in GetImageDataSize().
+ - Naming Local Variables:
+   Local variables begin in lowercase. There is more flexibility in the
+   naming of local variables although they still should convey some
+   semantics.
+ - Naming function parameters:
+   Function parameters begin in lowercase. There is more flexibility in the
+   naming of function parameters although they still should convey some
+   semantics.
+                                                                                 
+* Classes:
+ - Don't use the inline keyword when defining an inline function
+   within a class definition.
+   (Any method defined within a .h file is ipso facto considered as 'inline'.
+   Dont write useless stuff!)
+ - As stated in the "Naming conventions" section, class data members
+   named beginning with a lower case 'm' followed by capital letter 
+   as in mGroupPixel.
+   But the parameter names of method should be named with a lowercase
+   letter (in order to distinguish at a glance data members, from parameters
+   and also to avoid potential collisions with data members):
+      void A::SetGroupPixel( int groupPixel )
+      {
+         mGroupPixel = groupPixel;
+      }
+ - Don't use trailing ';' in inline function definition.
+   use :
+   void A::SetGroupPixel( int groupPixel ){mGroupPixel = groupPixel;}
+     NOT
+   void A::SetGroupPixel( int groupPixel ){mGroupPixel = groupPixel;};
+ - Do not repeat the 'virtual' keyword when overriding virtual base methods
+   in declaration of subclasses:
+     class A
+     {
+        virtual void foo(...);
+     };
+     class B : public bbtk::A
+     {
+        void foo(...);          // and NOT: virtual void foo(...);
+     };
+     
+    (when the keyword 'virtual' is used at the parent level, it's propagated 
+     for all the child classes)
+
+ - In declaration of subclasses, always preprend the class name with 'bbtk::'
+   in order not to confuse Umbrello ( OpenSource UML diagram generator)
+     class A
+     {
+        ...
+     };
+     class B : public bbtk::A // and NOT: class B: public A
+     {
+        ...   
+     };    
+ - The public, protected, private declarations should be at the
+   same indent level as the class. Use :
+     class A
+     {
+     public:
+        void bar(...);
+     protected:
+        void foo(...);	
+     private:
+        void pff(...);
+     };
+     
+ - The Data members should be declared at the end of the class declaration :
+     class A
+     {
+     public:
+        void bar(...);
+     protected:
+        void foo(...);
+     private:
+        void pff(...);
+
+     // --- Data members
+     
+     public:
+        int mPublicCounter;
+     protected:
+        int mProtectedCounter;
+     private:
+        int mPrivateCounter;     
+     }; 
+ 
+ - Method and functions devoided of arguments should not use the void
+   notation. Use :
+     SomeType Header::GetPixelData()
+   and not
+     SomeType Header::GetPixelData(void)
+                                                                                
+* Use of braces:
+ - Braces must be used to delimit the scope of an if, for, while, switch, or
+   other control structure. Braces are placed on a line by themselves, and
+   at the same indentation level as the control structure to which they
+   belong:
+      for (i=0; * i&lt;3; i++)
+      {
+         ...
+      }
+   and NOT :
+      for (i=0; * i&lt;3; i++) {
+         ...
+      }   
+   or when using an if:
+      if ( condition )
+      {
+         ...
+      }
+      else if ( other condition )
+      {
+         ...
+      }
+      else
+      {
+        ....
+      }
+    and NOT :
+      if ( condition ) {
+         ...
+      } else if ( other condition ) {
+         ...
+      } else {
+         ....
+      }    
+   You can choose to use braces on a line with a code block when
+   the block consists of a single line:
+      if ( condition ) { foo=1; }
+      else if ( condition2 ) { foo=3; }
+      else { return; }
+   or
+      for (i=0; i&lt;3; ++i) {x[i]=0.0;}
+   Methods and functions should follow the same usage of braces:
+      void File::ParsePixelData()
+      {
+         ...
+      }
+
+* Special layout:
+ - Avoid code mixed with comments on a single line. Instead, prepend the
+   logical blocks of code with the concerned comments.
+ - Use parentheses around conditions e.g. with an if statement:
+      if ( someLocalVariable == 2 ) { ... }
+ - Add spaces around parentheses, or braces. Use
+      if ( someLocalVariable == 2 ) { mClassMember += 1; }
+   and not
+      if (someLocalVariable == 2) {mClassMember += 1;}
+ - Add spaces around each side of the assignement operator, and
+   around binary operators used in boolean expression. Use
+      someLocalVariable = mClassMember * 2;
+      if ( someLocalVariable == 2 || mClassMember == 2 ) ...
+   and not
+      someLocalVariable=mClassMember*2;
+      if ( someLocalVariable==2||mClassMember==2 ) ...
+                                                                                
+* Miscelaneous:
+ - Don't use underscores. Don't use tabs. Don't use control characters
+   like ^M. Anyhow, cvs is configured to reject such commits.
+ - Comments should be in C++ style ("// ...", two slashes, per line). Don't
+   use C style comments ("/* ... */").
+ - The last line of a file should terminate with "\n".
+ - Returned arguments of methods and functions should not be wrapped with
+   parentheses. Use
+      return iter-&gt;second;
+   but do not use
+      return ( iter-&gt;second );
+                                                                                
+* Debugging and Verbose modes:
+   Never use std::cout. Instead use the bbtkMessage, bbtkDebugMessage, bbtkWarning or bbtkError macros and their variants. Example:
+      #include "bbtkMessageManager.h"
+      ...
+      {
+         bbtkDebugMessageInc("MyClass",9,"Local function name: entering.");
+         ...
+         bbtkDecTab("MyClass",9);
+      }
+    will send the message to std::cout when the Debug messages are compiled 
+    and the Message Level for the category of messages "MyClass" is greater than 9.
+                                                                                
+* Documentation:
+   The Doxygen open-source system is used to generate on-line documentation.
+   Doxygen requires the embedding of simple comments in the code which is in
+   turn extracted and formatted into documentation. See :
+      http://www.stack.nl/~dimitri/doxygen/
+   for more information about Doxygen.
+ - Documenting a class:
+   Classes should be documented using the class and brief doxygen commands,
+   followed by the detailed class description:
+      /**
+       * \class Header
+       * \brief Header acts as container of Dicom elements of an image.
+       *
+       * Detailed description of the class is provided here
+       * ...
+       */
+   The key here is that the comment starts with /**, each subsequent line has
+   an aligned *, and the comment block terminates with a */.
+ - Documenting class members and inline methods:
+   All the members and the inline methods should be documented within
+   the class declaration ( .h file) as shown in the following example:
+      class Header
+      {
+         /// True when parsing was successfull. False otherwise.
+         bool mReadable = false;
+                                                                                
+         /// \brief The number of lines of the image as interpreted from
+         ///        the various elements encountered at header parsing.
+         int mNumberOfLines = -1;
+                                                                                
+         /// Predicate implemented as accessor around \ref mReadable.
+         bool IsReadable() { return mReadable; }
+      };
+ - Documenting a Method:
+   Methods should be documented using the following comment block style
+   as shown in the following example:
+                                                                                
+      /**
+       * \brief  Within the Dicom Elements (parsed with the public and private
+       *         dictionaries), look for the element value representation of
+       *         a given tag.
+       * @param  group  Group number of the searched tag.
+       * @param  elem Element number of the searched tag.
+       * @return Corresponding element value representation when it exists,
+       *         and the string "bbtk::Unfound" otherwise.
+       */
+      std::string Document::GetEntryByNumber(guint16 group, guint16 elem)
+      {
+         ...
+      }
+                                                                                
+* External includes and C style:
+ - Only the C++ standard library and the STL includes should be used.
+   When including don't use the .h extension (use #include <iostream>
+   instead of #include <iostream.h>).
+   Note: include the stl header AFTER the bbtk ones (otherwise pragma
+         warnings won't work).
+ - Don't use the C standard library. Don't include stdio.h, ctype.h...
+   Don't use printf(), sprinf(), FILE*...
+ - Don't use the NULL notation (neither as macro, nor as const int NULL=0).
+   A pointer that doesn't refer to an object should simply be defined as
+      DataPointer *myDataPointer = 0;
+                                                                                
+* Basic types:
+ - Assume T is a given type. When declaring or defining with the
+   "pointer to T" notation, the * character must be adjacent to
+   the variable and not the type. That is use
+      T *foo = 0;
+   and not
+      T* foo = 0;
+   nor
+      T * foo = 0;
+ - Assume T is a given type. When declaring or defining with the
+   "reference to T" notation, the &amp; character must be adjacent to
+   the variable and not the type. That is use :
+      T &amp;foo = 0;
+   and not
+      T&amp; foo = 0;
+
+   (Doxygen will not have any longer to correct)
+
+ - Always define a typedef for a new type and be consistent in usage.
+   Use :
+      typedef Header *HeaderPointer;
+      HeaderPointer myHeaderPointer;
+      
+ - One notorious counter example for non using C style inclusion concerns
+   exact-width integers (since there seem to be no equivalent for C++).
+   When using exact-width integers use the typedef names defined by
+   the Basic ISO C99: 7.18 Integer types i.e.
+      int8_t     int16_t     int32_t     int64_t (signed integers)
+   and
+      uint8_t    uint16_t    uint32_t    uint64_t (unsigned integers).
+   Conversion table is then:
+    unsigned char       -&gt; uint8_t;
+    unsigned short      -&gt; uint16_t;
+    unsigned int        -&gt; uint32_t;
+    unsigned long       -&gt; uint32_t;
+    unsigned long long  -&gt; uint64_t;
+    (signed) char       -&gt; int8_t;
+    short               -&gt; int16_t;
+    int                 -&gt; int32_t;
+    long                -&gt; int32_t;
+    long long           -&gt; int64_t;
+   Hence do not use declarations like "unsigned int".
+   With g++, accessing those typedef is achieved by the following
+      #include &lt; stdint.h &gt;
+</iostream.h></iostream></pre>
+
+
+<!--#######################################################################-->
+<hr size="1"><address style=""></address>
+
+</body></html>

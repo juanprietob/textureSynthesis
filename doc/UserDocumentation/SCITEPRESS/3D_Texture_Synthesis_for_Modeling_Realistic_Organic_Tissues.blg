@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: 3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.aux
+The style file: apalike.bst
+Database file #1: 3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.bib
+You've used 9 entries,
+            1935 wiz_defined-function locations,
+            542 strings with 5906 characters,
+and the built_in function-call counts, 4380 in all, are:
+= -- 418
+> -- 242
+< -- 5
++ -- 86
+- -- 86
+* -- 401
+:= -- 767
+add.period$ -- 28
+call.type$ -- 9
+change.case$ -- 88
+chr.to.int$ -- 9
+cite$ -- 9
+duplicate$ -- 137
+empty$ -- 268
+format.name$ -- 103
+if$ -- 843
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 88
+quote$ -- 0
+skip$ -- 108
+stack$ -- 0
+substring$ -- 305
+swap$ -- 18
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 54
+warning$ -- 0
+while$ -- 30
+width$ -- 0
+write$ -- 121

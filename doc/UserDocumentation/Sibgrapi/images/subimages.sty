@@ -1,0 +1,320 @@
+% subimages.sty
+% subimages style for LaTeX version 2e
+%
+% Current maintainer: Thomas Lewiner <tomlew@mat.puc-rio.br>
+% Last update: 2012, Feb 2nd by David Menotti <menottid@gmail.com>
+%
+% main functions:
+% - \setfigdir{\figdir/}
+%     defines the directory where the figure files are located
+% - \setfigwidth{0.8}
+%     defines \figwidth that can be used to define the proportion of the linewidth to be filled by the figure
+% - \[tvf]singleimage[ht]{caption}{\figwidth}{filename}
+%     insert one single image, with label the filename
+% - \[t]manyimages[ht]{  \oneimage... \oneimage... }
+%     insert a group of images with independent numbering
+% - \[vf]oneimage{caption}{width}{filename}
+%     insert one image in the group
+% - \[vf]woneimage{caption}{filename}
+%     insert one image in the group with width defined by \figwidth
+% - \[t]subimages[ht]{caption}{label}{ \subimage... \subimage... }
+%     insert a group of images with the same base numbering
+% - \[vf]subimage[caption]{\figwidth}{filename}
+%     insert one image in the group with width defined by \figwidth
+% - \[vf]wsubimage[caption]{filename}
+%     insert one image in the group 
+% - \figref[ffff]{label1}{label2}..
+%     creates Figures reference
+% - \figsubref{label}
+%     creates a reference to a subfigure inside a figure
+% - \subfigref{label}
+%     creates a reference to a subfigure of a figure
+%
+% in the above function:
+% - the t variant creates a banner image in two-columns environment
+% - the v variant sets the height of the figure instead of its width
+% - the f variant creates a box around the figure
+%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{subimages}[2007/06/21]
+\typeout{Document Style `subimages' - environment}
+%
+\RequirePackage{ifthen}
+\RequirePackage{ifpdf}
+\RequirePackage[caption=false,font=footnotesize]{subfig}
+
+
+\ifpdf
+ \RequirePackage[pdftex]{graphicx} \pdfcompresslevel=9
+ \DeclareGraphicsExtensions{.pdf,.png}
+ \newcommand{\ext}{png}
+\else
+ \RequirePackage{graphicx}
+ \DeclareGraphicsExtensions{.eps}
+ \newcommand{\ext}{eps}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\providecommand{\figurename}{Fig.}
+\providecommand{\figuresname}{Figs.}
+\newcommand{\figref}[1]{\figurename~\ref{fig:#1}}
+\newcommand{\figreff}[2]{\figuresname~\ref{fig:#1} and \ref{fig:#2}}
+\newcommand{\figrefff}[3]{\figuresname~\ref{fig:#1}, \ref{fig:#2} and \ref{fig:#3}}
+\newcommand{\figreffff}[4]{\figuresname~\ref{fig:#1}, \ref{fig:#2}, \ref{fig:#3} and~\ref{fig:#4}}
+\newcommand{\figrefffff}[5]{\figuresname~\ref{fig:#1}, \ref{fig:#2}, \ref{fig:#3}, \ref{fig:#4} and~\ref{fig:#5}}
+\newcommand{\figsubref}[1]{\subref{subfig:#1}}
+\newcommand{\subfigref}[1]{\figurename~\ref{subfig:#1}}
+
+\newcommand{\figwidth}{1}
+\newcommand{\setfigwidth}[1]{\renewcommand{\figwidth}{#1}}
+
+\newcommand{\figdir}{figs}
+\newcommand{\setfigdir}[1]{\renewcommand{\figdir}{#1}}
+
+\newcommand{\fsep}{\hspace*{\fill} }
+\newcommand{\fignum}[1]{\footnotesize #1)\hspace*{-2mm}}
+%\renewcommand{\subfigtopskip}{\stretch{1}}
+%\renewcommand{\subfigcapskip}{\stretch{1}}
+%\renewcommand{\subfigbottomskip}{0in}
+
+\newsubfloat{figure}
+
+%==============================================================================%
+%==============================================================================%
+
+
+\newcommand{\singleimage}[4][ht]{%
+ \begin{figure}[#1]%
+  \centering%
+  \includegraphics[width=#3\linewidth]{\figdir/#4}%
+  \caption{#2}%
+  \label{fig:#4}%
+ \end{figure}%
+}
+
+\newcommand{\vsingleimage}[4][ht]{%
+ \begin{figure}[#1]%
+  \centering%
+  \includegraphics[height=#3\linewidth]{\figdir/#4}%
+  \caption{#2}%
+  \label{fig:#4}%
+ \end{figure}%
+}
+
+\newcommand{\tsingleimage}[4][ht]{%
+\begin{figure*}[#1]%
+ \centering%
+ \includegraphics[width=#3\linewidth]{\figdir/#4}%
+ \caption{#2}%
+ \label{fig:#4}%
+\end{figure*}%
+}
+\newcommand{\tvsingleimage}[4][ht]{%
+\begin{figure*}[#1]%
+ \centering%
+ \includegraphics[height=#3\linewidth]{\figdir/#4}%
+ \caption{#2}%
+ \label{fig:#4}%
+\end{figure*}%
+}
+
+%------------------------------------------------------------------------------%
+
+\newcommand{\fsingleimage}[4][ht]{%
+ \begin{figure}[#1]%
+  \centering%
+  \fbox{\includegraphics[width=#3\linewidth]{\figdir/#4}}%
+  \caption{#2}%
+  \label{fig:#4}%
+ \end{figure}%
+}
+\newcommand{\vfsingleimage}[4][ht]{%
+ \begin{figure}[#1]%
+  \centering%
+  \fbox{\includegraphics[height=#3\linewidth]{\figdir/#4}}%
+  \caption{#2}%
+  \label{fig:#4}%
+ \end{figure}%
+}
+
+\newcommand{\tfsingleimage}[4][ht]{%
+\begin{figure*}[#1]%
+ \centering%
+ \fbox{\includegraphics[width=#3\linewidth]{\figdir/#4}}%
+ \caption{#2}%
+
+ \label{fig:#4}%
+\end{figure*}%
+}
+\newcommand{\tvfsingleimage}[4][ht]{%
+\begin{figure*}[#1]%
+ \centering%
+ \fbox{\includegraphics[height=#3\linewidth]{\figdir/#4}}%
+ \caption{#2}%
+ \label{fig:#4}%
+\end{figure*}%
+}
+
+
+%==============================================================================%
+%==============================================================================%
+
+
+\newcommand{\oneimage}[3]{%
+ \fsep\begin{minipage}[c]{#2\linewidth}\centering%
+  \includegraphics[width=\linewidth]{\figdir/#3}%
+  \caption{#1}\label{fig:#3}%
+%  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+\newcommand{\voneimage}[3]{%
+ \fsep\begin{minipage}[c]{#2\linewidth}\centering%
+  \includegraphics[height=\linewidth]{\figdir/#3}%
+  \caption{#1}\label{fig:#3}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+
+\newcommand{\foneimage}[3]{%
+ \fsep\begin{minipage}[c]{#2\linewidth}\centering%
+  \fbox{\includegraphics[width=\linewidth]{\figdir/#3}}%
+  \caption{#1}\label{fig:#3}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+\newcommand{\vfoneimage}[3]{%
+ \fsep\begin{minipage}[c]{#2\linewidth}\centering%
+  \fbox{\includegraphics[height=\linewidth]{\figdir/#3}}%
+  \caption{#1}\label{fig:#3}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+
+%------------------------------------------------------------------------------%
+
+\newcommand{\woneimage}[2]{%
+ \fsep\begin{minipage}[c]{\figwidth\linewidth}\centering%
+  \includegraphics[width=\linewidth]{\figdir/#2}%
+  \caption{#1}\label{fig:#2}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+\newcommand{\vwoneimage}[2]{%
+ \fsep\begin{minipage}[c]{\figwidth\linewidth}\centering%
+  \includegraphics[height=\linewidth]{\figdir/#2}%
+  \caption{#1}\label{fig:#2}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+
+\newcommand{\fwoneimage}[2]{%
+ \fsep\begin{minipage}[c]{\figwidth\linewidth}\centering%
+  \fbox{\includegraphics[width=\linewidth]{\figdir/#2}}%
+  \caption{#1}\label{fig:#2}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+\newcommand{\vfwoneimage}[2]{%
+ \fsep\begin{minipage}[c]{\figwidth\linewidth}\centering%
+  \fbox{\includegraphics[height=\linewidth]{\figdir/#2}}%
+  \caption{#1}\label{fig:#2}%
+  \makeatletter\@fs@mid\unvbox\@floatcapt\makeatother%
+ \end{minipage}\fsep%
+}%
+
+
+\newcommand{\manyimages}[2][ht]{\begin{figure}[#1]\centering#2\end{figure}}
+\newcommand{\tmanyimages}[2][t]{\begin{figure*}[#1]\centering#2\end{figure*}}
+
+
+
+%==============================================================================%
+%==============================================================================%
+
+
+
+\newcommand{\subimage}[3][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\includegraphics[width=#2\linewidth]{\figdir/#3}}%
+ }{%
+  \subfloat[#1\label{subfig:#3}]{\includegraphics[width=#2\linewidth]{\figdir/#3}}%
+ }%
+ \fsep%
+}
+\newcommand{\vsubimage}[3][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\includegraphics[height=#2\linewidth]{\figdir/#3}}%
+ }{%
+  \subfloat[#1\label{subfig:#3}]{\includegraphics[height=#2\linewidth]{\figdir/#3}}%
+ }%
+ \fsep%
+}
+
+\newcommand{\fsubimage}[3][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\fbox{\includegraphics[width=#2\linewidth]{\figdir/#3}}}%
+ }{%
+  \subfloat[#1\label{subfig:#3}]{\fbox{\includegraphics[width=#2\linewidth]{\figdir/#3}}}%
+ }%
+ \fsep%
+}
+\newcommand{\vfsubimage}[3][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\fbox{\includegraphics[height=#2\linewidth]{\figdir/#3}}}%
+ }{%
+  \subfloat[#1\label{subfig:#3}]{\fbox{\includegraphics[height=#2\linewidth]{\figdir/#3}}}%
+ }%
+ \fsep%
+}
+
+%------------------------------------------------------------------------------%
+
+\newcommand{\wsubimage}[2][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\includegraphics[width=\figwidth\linewidth]{\figdir/#2}}%
+ }{%
+  \subfloat[#1\label{subfig:#2}]{\includegraphics[width=\figwidth\linewidth]{\figdir/#2}}%
+ }%
+ \fsep%
+}
+\newcommand{\vwsubimage}[2][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\includegraphics[height=\figwidth\linewidth]{\figdir/#2}}%
+ }{%
+  \subfloat[#1\label{subfig:#2}]{\includegraphics[height=\figwidth\linewidth]{\figdir/#2}}%
+ }%
+ \fsep%
+}
+
+\newcommand{\fwsubimage}[2][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\fbox{\includegraphics[width=\figwidth\linewidth]{\figdir/#2}}}%
+ }{%
+  \subfloat[#1\label{subfig:#2}]{\fbox{\includegraphics[width=\figwidth\linewidth]{\figdir/#2}}}%
+ }%
+ \fsep%
+}
+\newcommand{\vfwsubimage}[2][]{%
+ \fsep%
+ \ifthenelse{\equal{#1}{}}{%
+  \subfloat{\fbox{\includegraphics[height=\figwidth\linewidth]{\figdir/#2}}}%
+ }{%
+  \subfloat[#1\label{subfig:#2}]{\fbox{\includegraphics[height=\figwidth\linewidth]{\figdir/#2}}}%
+ }%
+ \fsep%
+}
+
+
+\newcommand{\subimages}[4][ht]{\begin{figure}[#1]\centering#4\caption{#2}\label{fig:#3}\end{figure}}
+\newcommand{\tsubimages}[4][t]{\begin{figure*}[#1]\centering#4\caption{#2}\label{fig:#3}\end{figure*}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,37 @@
+#========================================================================
+# MACRO WHICH COPIES ALL IMAGES (png, jpg, gif) 
+# FROM SOURCE TREE TO DOC BUILD TREE
+# AND INSTALL THEM IN BBTK DOC TREE
+MACRO(USER_DOC_INSTALL_IMAGES DOC_RELATIVE_INSTALL_PATH)
+  MESSAGE(STATUS "* Copying png,jpg,tif images in ${BBTK_DOC_BUILD_PATH}/${DOC_RELATIVE_INSTALL_PATH}")
+  FILE(GLOB PNG_IMAGES "*.png")
+  FILE(GLOB JPG_IMAGES "*.jpg")
+  FILE(GLOB TIF_IMAGES "*.tif")
+  SET(IMAGES
+    ${PNG_IMAGES}
+    ${JPG_IMAGES}
+    ${TIF_IMAGES}
+    )
+#    MESSAGE(ERROR ${IMAGES} )
+  FOREACH(image ${IMAGES})  
+    GET_FILENAME_COMPONENT(filename "${image}" NAME)
+    CONFIGURE_FILE(
+      ${image}
+       ${${PROJECT_NAME}_DOC_BUILD_PATH}/${DOC_RELATIVE_INSTALL_PATH}/${filename}
+      COPYONLY
+      ) 
+      
+    #  IF (WIN32)
+#	CONFIGURE_FILE(
+#          ${image}
+#          ${CMAKE_CURRENT_BINARY_DIR}/${filename}
+#          COPYONLY
+#	  )
+#      ENDIF(WIN32)
+    # MESSAGE(ERROR "${image} (${filename}) in :  ${PROJECT_BINARY_DIR}/${BBTK_DOC_INSTALL_PATH}/${DOC_RELATIVE_INSTALL_PATH}/${filename}")
+  ENDFOREACH(image)
+  INSTALL( 
+      FILES ${IMAGES} 
+      DESTINATION ${${PROJECT_NAME}_DOC_INSTALL_PATH}/${DOC_RELATIVE_INSTALL_PATH}
+    )  
+ENDMACRO(USER_DOC_INSTALL_IMAGES)

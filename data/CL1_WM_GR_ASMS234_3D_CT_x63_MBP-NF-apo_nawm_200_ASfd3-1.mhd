@@ -1,0 +1,15 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+TransformMatrix = 1 0 0 0 1 0 0 0 1
+Offset = -0.375 -0.375 -0.375
+CenterOfRotation = 0 0 0
+AnatomicalOrientation = RAI
+ElementSpacing = 0.25 0.25 0.25
+DimSize = 128 128 128
+ElementNumberOfChannels = 4
+ElementSize = 1 1 1
+ElementType = MET_DOUBLE
+ElementDataFile = CL1_WM_GR_ASMS234_3D_CT_x63_MBP-NF-apo_nawm_200_ASfd3-1.raw

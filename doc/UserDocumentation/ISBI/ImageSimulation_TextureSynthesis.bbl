@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{revol2002}
+C.~Revol-Muller, H.~Benoit-Cattin, Y.~Carillon, C.~Odet, A.~Briguet, and
+  F.~Peyrin,
+\newblock ``Bone mri segmentation assessment based on synchrotron radiation
+  computed microtomography,''
+\newblock {\em IEEE Trans Nucl Sci}, vol. 49, no. 1, pp. 220{\textendash}224,
+  2002.
+
+\bibitem{CHAR-09}
+D.~Charpigny, T.~Grenier, C.~Odet, and H.~Benoit-Cattin,
+\newblock ``Towards iron oxide nanoparticles quantization in molecular mr
+  images by default field deconvolution,''
+\newblock in {\em Proc. ISBI 2009: 6th IEEE international symposium on
+  biomedical imaging}, 2009.
+
+\bibitem{Castella:08}
+C.~Castella, K.~Kinkel, F.~Descombes, M.P. Eckstein, P.E. Sottas, F.R. Verdun,
+  and F.O. Bochud,
+\newblock ``Mammographic texture synthesis: second-generationclustered lumpy
+  backgrounds using agenetic algorithm,''
+\newblock {\em Opt. Express}, vol. 16, no. 11, pp. 7595--7607, May 2008.
+
+\bibitem{DBLP:conf/smi/HoldsteinFPB09}
+Y.~Holdstein, A.~Fischer, L~Podshivalov, and P.Z. XBar-Yoseph,
+\newblock ``Volumetric texture synthesis of bone micro-structure as a base for
+  scaffold design,''
+\newblock in {\em Shape Modeling International}, 2009, pp. 81--88.
+
+\bibitem{KFCODLW07}
+Johannes Kopf, Chi-Wing Fu, Daniel Cohen-Or, Oliver Deussen, Dani Lischinski,
+  and Tien-Tsin Wong,
+\newblock ``Solid texture synthesis from 2d exemplars,''
+\newblock {\em ACM Transactions on Graphics (Proceedings of SIGGRAPH 2007)},
+  vol. 26, no. 3, pp. 2:1--2:9, 2007.
+
+\bibitem{kwatra:2005:SIGGRAPH}
+C~. Kwatra, I.~Essa, A.~Bobick, and N.~Kwatra,
+\newblock ``Texture optimization for example-based synthesis,''
+\newblock {\em ACM Transactions on Graphics, SIGGRAPH 2005}, August 2005.
+
+\bibitem{Lefebvre:2006:ATS:1141911.1141921}
+S.~Lefebvre and H.~Hoppe,
+\newblock ``Appearance-space texture synthesis,''
+\newblock {\em ACM Trans. Graph.}, vol. 25, pp. 541--548, July 2006.
+
+\bibitem{ROLLAND2000}
+J.~P. Rolland, V.~Vo, B.~Bloss, and C.~K. Abbey,
+\newblock ``Fast algorithms for histogram matching: application to texture
+  synthesis,''
+\newblock {\em Journal of Electronic Imaging}, vol. 9, pp. 39--45, Jan. 2000.
+
+\bibitem{prieto2012}
+J.C. Prieto, C.~Revol-Muller, F.~Peyrin, P.~Camelliti, and C.~Odet,
+\newblock ``3d texture synthesis for modeling realistic organic tissues,''
+\newblock in {\em VISAPP'12 International Conference on Computer Vision Theory
+  and Applications}, 2012, p. in press.
+
+\bibitem{PR2002}
+C.~Revol-Muller, F.~Peyrin, Y.~Carrillon, and C.~Odet,
+\newblock ``Automated 3d region growing algorithm based on an assessment
+  function,''
+\newblock {\em Pattern Recognition Letters}, 2002.
+
+\end{thebibliography}

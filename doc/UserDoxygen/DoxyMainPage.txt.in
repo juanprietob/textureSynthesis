@@ -1,0 +1,19 @@
+/**
+ * \mainpage bbtk documentation
+
+\htmlonly 
+
+"A black box is any system in which only the input and output characteristics are of interest - without regard to its internal mechanism or structure" (from <A href="http://en.wikipedia.org/wiki/Black_box_%28disambiguation%29" > wikipedia </A>)
+
+<li> 
+<A href="../CodingStyle.html"> Coding Style </A>
+</li>
+
+\endhtmlonly
+
+
+ 
+
+
+         
+ */

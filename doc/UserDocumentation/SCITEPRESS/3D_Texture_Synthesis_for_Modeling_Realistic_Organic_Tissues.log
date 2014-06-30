@@ -1,0 +1,644 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.7.2)  18 JUN 2013 18:34
+entering extended mode
+ %&-line parsing enabled.
+**3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.tex
+(./3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, loaded.
+(./config.tex (./article.cls
+Document Class: article 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/geometry/geometry.sty
+Package: geometry 2008/12/21 v4.2 Page Geometry
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@dimlist=\toks15
+)
+(/usr/share/texmf-texlive/tex/latex/anysize/anysize.sty
+Package: anysize 1994/08/13 setting margin sizes
+
+document style option `anysize' loaded
+Michael Salzenberg, Thomas Esser, Dirk Hillbrecht
+Version 1.0, Aug 13, 1994
+\@Leftmargin=\dimen107
+\@Rightmargin=\dimen108
+\@Topmargin=\dimen109
+\@Bottommargin=\dimen110
+) (/usr/share/texmf-texlive/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+\epsfxsize=\dimen113
+\epsfysize=\dimen114
+)
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip43
+\subfigcapskip=\skip44
+\subfigcaptopadj=\dimen115
+\subfigbottomskip=\skip45
+\subfigcapmargin=\dimen116
+\subfiglabelskip=\skip46
+\c@subfigure=\count90
+\c@lofdepth=\count91
+\c@subtable=\count92
+\c@lotdepth=\count93
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-texlive/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip47
+\subfig@bottom=\skip48
+)
+(/usr/share/texmf-texlive/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count94
+\calc@Bcount=\count95
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip49
+\calc@Bskip=\skip50
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count96
+\calc@Cskip=\skip51
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks16
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen119
+))
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks18
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks19
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks20
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+Package: amsthm 2004/08/06 v2.20
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip55
+\thm@postskip=\skip56
+\thm@headsep=\skip57
+\dth@everypar=\toks27
+)
+(/usr/share/texmf-texlive/tex/latex/tools/multicol.sty
+Package: multicol 2008/12/05 v1.6h multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box28
+\multicol@leftmargin=\dimen128
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen129
+\page@free=\dimen130
+\premulticols=\dimen131
+\postmulticols=\dimen132
+\multicolsep=\skip58
+\multicolbaselineskip=\skip59
+\partial@page=\box29
+\last@line=\box30
+\mult@rightbox=\box31
+\mult@grightbox=\box32
+\mult@gfirstbox=\box33
+\mult@firstbox=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen133
+\multicolovershoot=\dimen134
+\multicolundershoot=\dimen135
+\mult@nat@firstbox=\box52
+\colbreak@box=\box53
+)
+(/usr/share/texmf-texlive/tex/latex/pslatex/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup6
+\symitalic=\mathgroup7
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+) (./apalike.sty
+\bibhang=\skip60
+)
+(./SciTePress.sty
+Conference Style for SciTePress for LaTeX 2e -- version of March 2011
+\titlebox=\skip61
+) (/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen136
+\captionmargin@=\dimen137
+\captionwidth=\dimen138
+\caption@indent=\dimen139
+\caption@parindent=\dimen140
+\caption@hangindent=\dimen141
+)
+\c@ContinuedFloat=\count117
+Package caption Info: subfigure package is loaded.
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+))
+(/usr/share/texmf-texlive/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen142
+)
+(./3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.aux
+
+LaTeX Warning: Label `equ:imagenergy' multiply defined.
+
+)
+\openout1 = `3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 3.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 3.
+
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+*geometry auto-detecting driver*
+*geometry detected driver: dvips*
+-------------------- Geometry parameters
+paper: a4paper
+landscape: --
+twocolumn: true
+twoside: true
+asymmetric: --
+h-parts: 71.70166pt, 0.7\paperwidth , 107.55254pt (default)
+v-parts: 101.40665pt, 0.7\paperheight , 152.11pt (default)
+hmarginratio: 2:3
+vmarginratio: 2:3
+lines: --
+heightrounded: --
+bindingoffset: 0.0pt
+truedimen: --
+includehead: --
+includefoot: --
+includemp: --
+driver: dvips
+-------------------- Page layout dimensions and switches
+\paperwidth  597.50787pt
+\paperheight 845.04684pt
+\textwidth  449.59116pt
+\textheight 628.79474pt
+\oddsidemargin  1.70705pt
+\evensidemargin 1.70705pt
+\topmargin  -31.2982pt
+\headheight 0.0pt
+\headsep    54.06006pt
+\footskip   48.36958pt
+\marginparwidth 111.0pt
+\marginparsep   11.0pt
+\columnsep  22.76228pt
+\skip\footins  9.0pt plus 4.0pt minus 2.0pt
+\hoffset 0.0pt
+\voffset 0.0pt
+\mag 1000
+\@twocolumntrue \@twosidetrue \@mparswitchtrue 
+(1in=72.27pt, 1cm=28.45pt)
+-----------------------
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 38.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 38
+.
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 38
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 38
+.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 38.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.69997> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <9> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 38.
+
+Underfull \hbox (badness 4193) in paragraph at lines 38--38
+[]\OT1/ptm/m/n/9 3D Tex-ture Syn-the-sis, Image-based Mod-el-ing, Or-gan Mod-el
+-ing, His-tol-ogy, Patient-specific, Im-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+
+ []
+
+File: skeletal_muscle.eps Graphic file (type eps)
+<skeletal_muscle.eps>
+File: striescardiaques.eps Graphic file (type eps)
+ <striescardiaques.eps>
+File: myocyte.eps Graphic file (type eps)
+ <myocyte.eps>
+File: hepatocyte.eps Graphic file (type eps)
+ <hepatocyte.eps>
+File: hepatique.eps Graphic file (type eps)
+
+<hepatique.eps>
+File: esrf.eps Graphic file (type eps)
+ <esrf.eps>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--64
+[][]$\OT1/pcr/m/n/9 http : / / bodybrowser . googlelabs . com / body .
+ []
+
+
+LaTeX Warning: Citation `KFCODLW07' on page 1 undefined on input line 80.
+
+
+LaTeX Warning: Citation `kwatra:2005:SIGGRAPH' on page 1 undefined on input lin
+e 81.
+
+
+Underfull \vbox (badness 2495) has occurred while \output is active []
+
+ [1
+
+
+
+
+]
+
+LaTeX Warning: Citation `Lefebvre:2006:ATS:1141911.1141921' on page 2 undefined
+ on input line 92.
+
+
+LaTeX Warning: Citation `ROLLAND2000' on page 2 undefined on input line 95.
+
+
+LaTeX Warning: Citation `Heeger:1995:PTA:218380.218446' on page 2 undefined on 
+input line 95.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 105.
+
+LaTeX Warning: Citation `kwatra:2005:SIGGRAPH' on page 2 undefined on input lin
+e 110.
+
+File: search_sample.eps Graphic file (type eps)
+<search_sample.eps>
+File: search_phase.eps Graphic file (type eps)
+ <search_phase.eps>
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
+\OT1/ptm/m/n/9 Anal-y-sis; $\OT1/pcr/m/n/9 www . cs . otago . ac . nz / cosc453
+ / student _
+ []
+
+[2]
+Underfull \hbox (badness 3803) in paragraph at lines 153--153
+[][]\OT1/ptm/m/n/9 ANN: A li-brary for ap-prox-i-mate near-est neigh-
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 153--153
+\OT1/ptm/m/n/9 bor search-ing; $\OT1/pcr/m/n/9 http : / / www . cs . umd . edu 
+/ []mount / ANN/$
+ []
+
+
+LaTeX Warning: Citation `kwatra:2005:SIGGRAPH' on page 3 undefined on input lin
+e 171.
+
+File: striescardiaques.eps Graphic file (type eps)
+<striescardiaques.eps>
+File: hepatique.eps Graphic file (type eps)
+ <hepatique.eps>
+File: striescardiaquesVol.eps Graphic file (type eps)
+ <striescardiaquesVol.eps>
+File: hepatiqueVol.eps Graphic file (type eps)
+
+<hepatiqueVol.eps>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: zebra.eps Graphic file (type eps)
+
+<zebra.eps>
+File: zebraAx.eps Graphic file (type eps)
+ <zebraAx.eps>
+File: zebraVol.eps Graphic file (type eps)
+ <zebraVol.eps>
+File: zebraSurf.eps Graphic file (type eps)
+ <zebraSurf.eps> [3]
+File: myocyte.eps Graphic file (type eps)
+ <myocyte.eps>
+File: myocyteSgMask.eps Graphic file (type eps)
+
+<myocyteSgMask.eps>
+File: myocyteAx.eps Graphic file (type eps)
+ <myocyteAx.eps>
+File: myocyteAxMask.eps Graphic file (type eps)
+ <myocyteAxMask.eps>
+File: myocyteSgVol.eps Graphic file (type eps)
+ <myocyteSgVol.eps>
+Underfull \hbox (badness 1968) in paragraph at lines 285--285
+[]\OT1/ptm/m/n/9 (b) Lon-gi-tu-di-nal view
+ []
+
+File: myocyteAxVol.eps Graphic file (type eps)
+<myocyteAxVol.eps>
+Underfull \hbox (badness 1629) in paragraph at lines 287--287
+[]\OT1/ptm/m/n/9 (c) Ax-ial view of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--292
+[][]$\OT1/pcr/m/n/9 http : / / www1 . ic . ac . uk / medicine / people / p .
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+File: redHistoSample.eps Graphic file (type eps)
+ <redHistoSample.eps>
+File: greenHistoSample.eps Graphic file (type eps)
+ <greenHistoSample.eps>
+File: blueHistoSample.eps Graphic file (type eps)
+ <blueHistoSample.eps>
+Overfull \hbox (7.48122pt too wide) in paragraph at lines 349--349
+ [][] 
+ []
+
+File: redHistoObject.eps Graphic file (type eps)
+<redHistoObject.eps>
+File: greenHistoObject.eps Graphic file (type eps)
+ <greenHistoObject.eps>
+File: blueHistoObject.eps Graphic file (type eps)
+ <blueHistoObject.eps>
+Overfull \hbox (7.48122pt too wide) in paragraph at lines 353--355
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `revol2002' on page 5 undefined on input line 372.
+
+File: esrfEvaluation.eps Graphic file (type eps)
+<esrfEvaluation.eps>
+
+LaTeX Warning: Citation `Hipp97' on page 5 undefined on input line 394.
+
+
+LaTeX Warning: Citation `Odgaard93' on page 5 undefined on input line 399.
+
+[5]
+File: esrf.eps Graphic file (type eps)
+ <esrf.eps>
+File: esrfMask.eps Graphic file (type eps)
+ <esrfMask.eps>
+File: esrf1.eps Graphic file (type eps)
+ <esrf1.eps>
+File: esrf1Mask.eps Graphic file (type eps)
+ <esrf1Mask.eps>
+File: texture3D-SRCTSynthetic.eps Graphic file (type eps)
+
+<texture3D-SRCTSynthetic.eps>
+File: texture3D-SRCT.eps Graphic file (type eps)
+ <texture3D-SRCT.eps>
+
+LaTeX Warning: Citation `Pizer:2003:DMM:945881.945883' on page 6 undefined on i
+nput line 453.
+
+
+Underfull \hbox (badness 1478) in paragraph at lines 448--455
+\OT1/ptm/m/n/10 chrotron Ra-di-a-tion Com-puted Micro-Tomography.
+ []
+
+(./3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.bbl
+Underfull \hbox (badness 1577) in paragraph at lines 11--15
+\OT1/ptm/m/n/9 fer-ences in the au-to-mated anal-y-sis of the three-
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 24--27
+\OT1/ptm/m/n/9 Tex-ture op-ti-miza-tion for example-based syn-the-sis.
+ []
+
+) [6] (./3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3663 strings out of 495062
+ 52106 string characters out of 1182645
+ 123812 words of memory out of 3000000
+ 6754 multiletter control sequences out of 15000+50000
+ 37281 words of font info for 98 fonts, out of 3000000 for 9000
+ 28 hyphenation exceptions out of 8191
+ 38i,9n,38p,393b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on 3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.d
+vi (6 pages, 37688 bytes).

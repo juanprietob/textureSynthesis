@@ -1,0 +1,70 @@
+#ifndef ITKIMAGEVECTORTOVECTORIMAGEFILTER_H
+#define ITKIMAGEVECTORTOVECTORIMAGEFILTER_H
+
+
+#include "itkImageToVectorImageFilter.h"
+
+namespace itk {
+/** \class itkImageToVectorFeatures
+ * \brief This class takes as input an image and composes it into
+ * a single itk::VectorImage with features R, G, B, Lumminosity, GradientMagnitud,
+*   GuassianGradientMagnitud with different 2 sigma.
+ *
+ * \par Inputs and Usage
+ * \code
+ *    filter->SetInput( 0, image0 );
+ *    filter->SetInput( 1, image1 );
+ *    ...
+ *    filter->Update();
+ *    itk::VectorImage< PixelType, dimension >::Pointer = filter->GetOutput();
+ * \endcode
+ * All input images are expected to have the same template parameters and have
+ * the same size and origin.
+ *
+ * \sa VectorImage
+ */
+
+template< class TInputImageVector,class TInputImage = itk::Image< typename TInputImageVector::PixelType::ComponentType, TInputImageVector::ImageDimension > >
+class ImageVectorToVectorImageFilter :
+public ImageToVectorImageFilter <TInputImage>
+{
+
+    public:
+        typedef ImageVectorToVectorImageFilter                      Self;
+        typedef SmartPointer<Self>                        Pointer;
+        typedef SmartPointer<const Self>                  ConstPointer;
+        itkNewMacro(Self);
+        itkTypeMacro(ImageVectorToVectorImageFilter, ImageToVectorImageFilter);
+
+        itkStaticConstMacro(Dimension, unsigned int, TInputImage::ImageDimension);
+
+        typedef typename TInputImage::InternalPixelType   PixelType;
+
+        typedef ImageToVectorImageFilter< TInputImage>     Superclass;
+
+        typedef TInputImage       InputImageType;
+
+        typedef TInputImageVector    InputImageVectorype;
+
+        typedef typename Superclass::OutputImageType OutputImageType;
+
+        virtual void SetInput(const InputImageVectorype *input);
+
+protected:
+    ImageVectorToVectorImageFilter();
+    ~ImageVectorToVectorImageFilter();
+
+    virtual void GenerateOutputInformation(void);
+
+ private:
+     InputImageVectorype* m_imagevector;
+};
+
+}
+
+
+#ifndef ITK_MANUAL_INSTANTIATION
+#include "itkimagevectortovectorimagefilter.txx"
+#endif
+
+#endif // ITKIMAGEVECTORTOVECTORIMAGEFILTER_H

@@ -1,0 +1,14 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+TransformMatrix = 1 0 0 0 1 0 0 0 1
+Offset = 0 0 0
+CenterOfRotation = 0 0 0
+AnatomicalOrientation = RAI
+ElementSpacing = 1 1 1
+DimSize = 128 128 128
+ElementNumberOfChannels = 3
+ElementType = MET_UCHAR
+ElementDataFile = CL1_WM_GR_AS10_12_13_ms79nfmbpperiplax63_2ASfd3-1RGB.raw

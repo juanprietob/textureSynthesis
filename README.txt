@@ -7,3 +7,4 @@ When you are done configuring the project type make.
 
 The project will generate an executable called optimizationTexture
 type ./optimizationTexture for an example on how to use the program.
+Example video in https://www.youtube.com/watch?v=IWRsPxHjHZc

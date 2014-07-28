@@ -53,9 +53,9 @@ int main(int argc, char *argv[])
       vtkSmartPointer<vtkImageData> imageout =  vtkSmartPointer<vtkImageData>::New();
       imageout->SetSpacing(image->GetSpacing());
       imageout->SetOrigin(image->GetOrigin());
-      imageout->SetScalarType(image->GetScalarType());
+      //imageout->SetScalarType(image->GetScalarType());
       imageout->SetExtent(extent[0], extent[1], 0,69,extent[4],extent[5]);
-      imageout->AllocateScalars();
+      imageout->AllocateScalars(image->GetScalarType(), image->GetNumberOfScalarComponents());
 
 
       for(unsigned i = 0; i <= 69; i++){
@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
       }
 
       vtkSmartPointer< vtkMetaImageWriter > writer = vtkSmartPointer< vtkMetaImageWriter >::New();
-      writer->SetInput(imageout);
+      writer->SetInputData(imageout);
       writer->SetFileName("movout.mhd");
       writer->Write();
 

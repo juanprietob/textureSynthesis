@@ -17,8 +17,6 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   ${creaANN_LIBRARIES}
-  ITKFilters
-  ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
   # (If you created only one Library, don't forget it !...) 
@@ -41,8 +39,7 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   ${creaANN_LIBRARIES}
-  ITKFilters
-  ITKANNConnector
+
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
   # (If you created only one Library, don't forget it !...)
@@ -67,8 +64,7 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   ${creaANN_LIBRARIES}
-  ITKFilters
-  ITKANNConnector
+
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
   # (If you created only one Library, don't forget it !...)
@@ -87,13 +83,10 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${crea_LIBRARIES}
   #    ${WXWIDGETS_LIBRARIES}
   #    ${KWWidgets_LIBRARIES}
-  #    ${VTK_LIBRARIES}
+      ${VTK_LIBRARIES}
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
-
-  ${creaANN_LIBRARIES}
-  ITKFilters
 
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -116,7 +109,6 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
-  ITKFilters
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
   # (If you created only one Library, don't forget it !...)
@@ -226,13 +218,13 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${crea_LIBRARIES}
   #    ${WXWIDGETS_LIBRARIES}
   #    ${KWWidgets_LIBRARIES}
-  #    ${VTK_LIBRARIES}
-  #    ${ITK_LIBRARIES}
+      ${VTK_LIBRARIES}
+      ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
   #${creaANN_LIBRARIES}
-  ITKFilters
+  #ITKFilters
   #ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -256,7 +248,6 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   #${creaANN_LIBRARIES}
-  ITKFilters
   #ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -278,8 +269,8 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
+
   #${creaANN_LIBRARIES}
-  ITKFilters
   #ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -303,7 +294,7 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   #${creaANN_LIBRARIES}
-  ITKFilters
+
   #ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -326,7 +317,7 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   #${creaANN_LIBRARIES}
-  ITKFilters
+
   #ITKANNConnector
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable

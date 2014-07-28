@@ -58,7 +58,7 @@ ITKToVTKImageImport<TypeImage>::~ITKToVTKImageImport(){
 */
 template<typename TypeImage>
 void ITKToVTKImageImport<TypeImage>::SetVTKImage(vtkImageData* img) {
-        vtkimageexport->SetInput( img );
+        vtkimageexport->SetInputData( img );
         vtkimageexport->Update();
         imageimportpointer->Update();
 }

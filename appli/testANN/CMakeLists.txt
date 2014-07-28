@@ -42,9 +42,9 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${BOOST_LIBRARIES}
 
   ann
-  ITKANNConnector
+  #ITKANNConnector
   #libstdc++
-  ITKPCA
+  #ITKPCA
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
   # (If you created only one Library, don't forget it !...) 

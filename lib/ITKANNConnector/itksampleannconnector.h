@@ -91,7 +91,7 @@ private:
 }
 #ifndef ITK_MANUAL_INSTANTIATION
 #ifndef ITKSampleANNConnector_TXX
-#include "itksampleannconnector.cpp"
+#include "itksampleannconnector.txx"
 #endif
 #endif
 

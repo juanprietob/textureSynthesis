@@ -126,7 +126,7 @@ protected:
 
 #ifndef ITK_MANUAL_INSTANTIATION
 #ifndef ITKVECTORIMAGETOSAMPLEFEATURES_TXX
-#include "itkvectorimagetosamplefeatures.cpp"
+#include "itkvectorimagetosamplefeatures.txx"
 #endif
 #endif
 

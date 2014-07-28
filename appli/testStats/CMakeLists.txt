@@ -81,12 +81,10 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${crea_LIBRARIES}
   #    ${WXWIDGETS_LIBRARIES}
   #    ${KWWidgets_LIBRARIES}
-  #    ${VTK_LIBRARIES}
+      ${VTK_LIBRARIES}
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
-  ITKFilters
-  ${creaANN_LIBRARIES}
 
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -113,8 +111,6 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
-  ITKFilters
-  ${creaANN_LIBRARIES}
 
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable

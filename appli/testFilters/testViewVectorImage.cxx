@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
                     vtkSmartPointer<vtkArrowSource> vtkarrow		= vtkSmartPointer<vtkArrowSource>::New();
                     vtkarrow->SetTipResolution(30);
                     vtkarrow->SetShaftResolution( 30  );
-                    actormapper->SetInput( vtkarrow->GetOutput() );
+                    actormapper->SetInputData( vtkarrow->GetOutput() );
 
                     double scale[3];
                     scale[0] = 0.3;

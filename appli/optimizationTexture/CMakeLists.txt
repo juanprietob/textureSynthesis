@@ -35,13 +35,12 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${crea_LIBRARIES}
   #    ${WXWIDGETS_LIBRARIES}
   #    ${KWWidgets_LIBRARIES}
-  #    ${VTK_LIBRARIES}
+      ${VTK_LIBRARIES}
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
-  ${creaANN_LIBRARIES}
-  ITKFilters
+  #ITKFiltersimage->GetScalarType()
   ann
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable
@@ -210,8 +209,8 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
-  ${creaANN_LIBRARIES}
-  ITKFilters
+
+  #ITKFilters
 
   ${GUIVTKViewers_LIBRARIES}
   ${ITKVTKImport_LIBRARIES}
@@ -255,8 +254,8 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
-  ${creaANN_LIBRARIES}
-  ITKFilters  
+
+  #ITKFilters
 
   ${GUIQtVTKViewers_LIBRARIES}
   ${ITKVTKImport_LIBRARIES}
@@ -301,7 +300,7 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
-  #${creaANN_LIBRARIES}
+  #
   #ITKFilters
   #${GUIQtVTKViewers_LIBRARIES}
   #${ITKVTKImport_LIBRARIES}
@@ -357,13 +356,13 @@ SET ( ${EXE_NAME}_LINK_LIBRARIES
   #    ${crea_LIBRARIES}
   #    ${WXWIDGETS_LIBRARIES}
   #    ${KWWidgets_LIBRARIES}
-  #    ${VTK_LIBRARIES}
+      ${VTK_LIBRARIES}
       ${ITK_LIBRARIES}
   #    ${GDCM_LIBRARIES}
   #    ${BOOST_LIBRARIES}
 
-  ${creaANN_LIBRARIES}
-  ITKFilters
+  #
+  #ITKFilters
   ann
   # USER! : Add here those agmonst the various (?) PROJECT LIBRARIES
   # you need for the current executable

@@ -137,7 +137,7 @@ private:
 
 #ifndef ITK_MANUAL_INSTANTIATION
 #ifndef ITKSAMPLEPCAREDUCTION_TXX
-#include "itksamplepcareduction.cpp"
+#include "itksamplepcareduction.txx"
 #endif
 #endif
 

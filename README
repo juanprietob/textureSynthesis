@@ -1,12 +1,12 @@
 
-= Texture synthesis
+=Texture synthesis
 
-== Modeling realistic organic tissues. 
+==Modeling realistic organic tissues. 
 
-=== Article
+===Article
 link:doc/UserDocumentation/SCITEPRESS/3D_Texture_Synthesis_for_Modeling_Realistic_Organic_Tissues.pdf[3D Texture Synthesis for Modeling Realistic Organic Tissues]
 
-== Citation
+==Citation
 
 [source, bibtex]
 ----
@@ -19,7 +19,7 @@ link:doc/UserDocumentation/SCITEPRESS/3D_Texture_Synthesis_for_Modeling_Realisti
 }
 ----
 
-= Requiremements.
+=Requiremements.
 
 ITK 4.5 with V3 compatibility. It will probably work with version 4.8.2
 

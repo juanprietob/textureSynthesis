@@ -203,7 +203,6 @@ private:
     vector< HistogramObjectPointerType > m_HistogramObjectVect;
 
     vector< vtkSmartPointer<vtkColorTransferFunction> > m_LutSampleVect;
-    //vector< vtkSmartPointer< vtkLookupTable > > m_LutSampleVect;
 
     vector< vtkSmartPointer<vtkColorTransferFunction> > m_LutObjectVect;
     //vector< vtkSmartPointer<vtkLookupTable> > m_LutObjectVect;

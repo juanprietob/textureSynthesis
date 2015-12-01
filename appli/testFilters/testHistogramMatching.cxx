@@ -12,21 +12,25 @@ int main(int argc, char ** argv)
 
     if( argc < 3 )
       {
-      cout << "Performs histogram matching between two images by computing a CDF of image source and match."<<endl;
-      cout << "The algorithm takes the values from match and searches the correct ones in source. "<<endl;
-      cout << "Usage: " << argv[0] << " ImageSource ImageToMatch" <<endl;
-      cout  << "options : "<<endl;
-      cout  << "-mask maskfilename"<< endl;
+      cerr << "Performs histogram matching between two images by computing a CDF of image source and target."<<endl;
+      cerr << "The algorithm takes the CDF values from the source and matches them to the CDF of target, the output is the image source matched to the target."<<endl;
+      cerr << "Usage: " << argv[0] << " ImageTarget ImageSource" <<endl;
+      cerr  << "options : "<<endl;
+      cerr  << "-mask maskfilename"<< endl;
+      cerr  << "-o outfilename"<< endl;
 
       return EXIT_FAILURE;
       }
 
     //bool exec2d = false;
     string maskfilename = "";
+    string outfilename = "";
 
-    for(int i = 3; i < argc; i++){
+    for(int i = 1; i < argc; i++){
         if (string(argv[i]) == "-mask"){
             maskfilename = string(argv[i+1]);
+        }else if(string(argv[i]) == "-o"){
+            outfilename = string(argv[i+1]);
         }
     }
 
@@ -86,11 +90,13 @@ int main(int argc, char ** argv)
     typedef itk::ImageFileWriter< ImageType >  WriterType;
 
     WriterType::Pointer writer = WriterType::New();
-    string extension = filename1.substr(filename1.find_last_of("."), 4);
-    filename1 = filename1.substr(0, filename1.find_last_of("."));
-    filename1.append("Match");
-    filename1.append(extension);
-    writer->SetFileName(filename1.c_str());
+    if(outfilename.compare("") == 0){
+        string extension = filename1.substr(filename1.find_last_of("."), 4);
+        outfilename = filename1.substr(0, filename1.find_last_of("."));
+        outfilename.append("Match");
+        outfilename.append(extension);
+    }
+    writer->SetFileName(outfilename.c_str());
     writer->SetInput(histomatch->GetOutput());
     writer->Update();
 

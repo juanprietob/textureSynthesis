@@ -13,7 +13,7 @@ HistogramMatchingFilter< TInputImage, TOutputImage>::HistogramMatchingFilter()
     m_InputImageSource = 0;
     m_ImageMask = 0;
     m_CalculateOutputImage = true;
-    m_NBins = 255;
+    m_NBins = 1024;
 
 }
 
@@ -184,21 +184,9 @@ void HistogramMatchingFilter< TInputImage, TOutputImage>::BeforeThreadedGenerate
         typedef typename HistogramGeneratorObjectType::HistogramSizeType   HistogramGeneratorObjectSizeType;
         HistogramGeneratorObjectSizeType sizeobj(m_TexelDimension);
 
-        //typename HistogramGeneratorObjectType::HistogramType::MeasurementVectorType lowerBound(m_TexelDimension);
-        //lowerBound.Fill(1);
-
-        //typename HistogramGeneratorObjectType::HistogramType::MeasurementVectorType  upperBound(m_TexelDimension);
-        //upperBound.Fill(255) ;
-
 
         typedef typename HistogramGeneratorSampleType::HistogramSizeType   HistogramGeneratorSampleSizeType;
         HistogramGeneratorSampleSizeType sizesamp(m_TexelDimension);
-
-        typename HistogramGeneratorSampleType::HistogramType::MeasurementVectorType lowerBoundsample(m_TexelDimension);
-        lowerBoundsample.Fill(1);
-
-        typename HistogramGeneratorSampleType::HistogramType::MeasurementVectorType  upperBoundsample(m_TexelDimension);
-        upperBoundsample.Fill(255) ;
 
         int nbins = m_NBins;
 
@@ -213,21 +201,11 @@ void HistogramMatchingFilter< TInputImage, TOutputImage>::BeforeThreadedGenerate
         }
 
         m_HistogramObjectVect[j]->SetHistogramSize( sizeobj );
-        //m_HistogramObjectVect[j]->SetHistogramBinMinimum(lowerBound);
         m_HistogramObjectVect[j]->SetAutoMinimumMaximum(true);        
         m_HistogramObjectVect[j]->SetInput(  this->GetInputImageObject()  );
         m_HistogramObjectVect[j]->Update();
-        /*m_HistogramObjectVect[j]->SetNumberOfBins( sizeobj );
-        m_HistogramObjectVect[j]->SetInput(  this->GetInputImageObject()  );
-        m_HistogramObjectVect[j]->SetMarginalScale( 0.5 );
-        //m_HistogramObjectVect[j]->SetHistogramMin (100);
-        //m_HistogramObjectVect[j]->SetMarginalScale( 0.0000001 );
-        m_HistogramObjectVect[j]->Compute();*/
-
 
         m_LutObjectVect.push_back(vtkSmartPointer<vtkColorTransferFunction>::New());
-        //m_LutObjectVect.push_back(vtkSmartPointer<vtkLookupTable>::New());
-        //m_LutObjectVect[j]->SetNumberOfTableValues(nbins);
 
         double cdfobject = 0;
         double totalfreq = m_HistogramObjectVect[j]->GetOutput()->GetTotalFrequency();
@@ -268,15 +246,11 @@ void HistogramMatchingFilter< TInputImage, TOutputImage>::BeforeThreadedGenerate
 
 
         m_HistogramSampleVect[j]->SetHistogramSize( sizesamp );
-        //m_HistogramSampleVect[j]->SetHistogramBinMinimum(lowerBoundsample);
-        //m_HistogramSampleVect[j]->SetHistogramBinMaximum(upperBoundsample);
         m_HistogramSampleVect[j]->SetAutoMinimumMaximum(true);
         m_HistogramSampleVect[j]->SetInput(  this->GetInputImageSource()  );
         m_HistogramSampleVect[j]->Update();
 
         m_LutSampleVect.push_back(vtkSmartPointer<vtkColorTransferFunction>::New());
-        //m_LutSampleVect.push_back(vtkSmartPointer<vtkLookupTable>::New());
-        //m_LutSampleVect[j]->SetNumberOfTableValues(nbins);
 
         double cdfsample = 0;
         typedef typename HistogramGeneratorSampleType::HistogramType HistogramSampleType;
@@ -291,16 +265,12 @@ void HistogramMatchingFilter< TInputImage, TOutputImage>::BeforeThreadedGenerate
                 cdfsample += (freq/totalfreqsample);                
 
                 m_LutSampleVect[j]->AddRGBPoint(cdfsample, histogramsample->GetMeasurement(i, j), 0, 0);
-                //m_LutSampleVect[j]->MapValue(cdfsample);
-                //m_LutSampleVect[j]->SetTableValue(m_LutObjectVect[j]->GetIndex(cdfsample), color[j], 0, 0);
             }
         }
 
         if(totalfreq == 0 && totalfreqsample == 0){
             m_CalculateOutputImage = false;
         }
-
-        //m_LutSampleVect[j]->Build();
 
     }
 }
